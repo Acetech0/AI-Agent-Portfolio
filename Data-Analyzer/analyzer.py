@@ -16,12 +16,14 @@ def analyze_data(file_path):
         print(f"Median: {df['Price'].median()}")
         print(f"Min: {df['Price'].min()}")
         print(f"Max: {df['Price'].max()}")
+        print(f"Standard Deviation: {df['Price'].std()}")  # Added standard deviation
 
         print("\nStatistics for Quantity:")
         print(f"Mean: {df['Quantity'].mean()}")
         print(f"Median: {df['Quantity'].median()}")
         print(f"Min: {df['Quantity'].min()}")
         print(f"Max: {df['Quantity'].max()}")
+        print(f"Standard Deviation: {df['Quantity'].std()}")  # Added standard deviation
 
         # Calculate total revenue (Price * Quantity)
         df['Revenue'] = df['Price'] * df['Quantity']
