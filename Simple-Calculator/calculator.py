@@ -1,33 +1,39 @@
-def add(x,y):
-    return x+y 
-def subtract(x,y):
-    return x-y 
-def multiply(x,y):
-    return x*y 
-def divide(x,y):
-    if y!=0:
-        return x/y
-    else:
+def add(x, y):
+    return x + y
+
+def subtract(x, y):
+    return x - y
+
+def multiply(x, y):
+    return x * y
+
+def divide(x, y):
+    if y == 0:
         return "Error: Cannot divide by zero!"
+    return x / y
 
-print("welcome to the simple calculator")
-print("Operations: 1] Add , 2] Subtract , 3] Multiply , 4] Division") 
+def power(x, y):
+    return x ** y
 
-a = float(input("enterr your first number: "))
-c = int((input("enterr your operation [1-4]: ")))
-b = float(input("enterr your second number: ")) 
+def main():
+    print("Simple Calculator")
+    num1 = float(input("Enter first number: "))
+    num2 = float(input("Enter second number: "))
+    print("Choose operation: 1) Add 2) Subtract 3) Multiply 4) Divide 5) Power")
+    choice = input("Enter choice (1-5): ")
 
-if c ==1:
-    r = add(a,b)
-    print(f"{a} + {b} = {r}")
-elif c ==2:
-    r = subtract(a,b)
-    print(f"{a} - {b} = {r}")
-elif c ==3:
-    r = multiply(a,b)
-    print(f"{a} * {b} = {r}")
-elif c ==4:
-    r = divide(a,b)
-    print(f"{a} / {b} = {r}")
-else:
-    print("Invalid operation choice!")
+    if choice == "1":
+        print(f"Result: {add(num1, num2)}")
+    elif choice == "2":
+        print(f"Result: {subtract(num1, num2)}")
+    elif choice == "3":
+        print(f"Result: {multiply(num1, num2)}")
+    elif choice == "4":
+        print(f"Result: {divide(num1, num2)}")
+    elif choice == "5":
+        print(f"Result: {power(num1, num2)}")
+    else:
+        print("Invalid choice")
+
+if __name__ == "__main__":
+    main()
