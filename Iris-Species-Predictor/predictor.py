@@ -14,7 +14,11 @@ def load_and_prepare_data():
     return df, iris.target_names
 
 def train_model(X_train, y_train):
+<<<<<<< HEAD
     model = RandomForestClassifier(n_estimators=200, random_state=42)
+=======
+    model = RandomForestClassifier(n_estimators=150, random_state=42)
+>>>>>>> axe
     model.fit(X_train, y_train)
     # Save the model
     joblib.dump(model, 'iris_model.pkl')
