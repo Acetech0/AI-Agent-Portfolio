@@ -28,7 +28,7 @@ def train_model(X_train, y_train):
 def evaluate_model(model, X_test, y_test, target_names):
     predictions = model.predict(X_test)
     accuracy = accuracy_score(y_test, predictions)
-    print(f"Model Accuracy: {accuracy * 100:.2f}%")
+    print(f"Model Accuracy: {accuracy * 100:.2f}%") # Accuracy reflects the model's performance on the test set
     return predictions
 
 def predict_species(model, features, target_names):
